@@ -26,6 +26,10 @@ Route::post('/login','LoginController@verify')->name('login.verify');
 Route::get('/admin', 'AdminController@index')->name('admin.index');
 Route::get('/CustomerReviewsList', 'AdminController@CustomerReviewsList')->name('admin.CustomerReviewsList');
 Route::get('student_detail', 'AdminController@detailStudent')->name('admin.detailStudent');
+Route::get('delete_student', 'AdminController@deleteStudent')->name('admin.deleteStudent');
+
+
+Route::get('/customer', 'AdminController@index')->name('admin.index');
 
 // Route::get('/addStudent', 'TeacherController@addStudent')->name('teacher.addStudent');
 // Route::post('/addStudent', 'TeacherController@createStudent');

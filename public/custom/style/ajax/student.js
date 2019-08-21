@@ -1,7 +1,6 @@
 
 $(document).ready(function(){
 
-
   $(document).on('click', '.view_data', function(){
     var sid = $(this).attr("id");
     if(sid != ''){
@@ -84,6 +83,7 @@ $(document).ready(function(){
                       "<td>"+ data.studentList[i].studentId +"</td>"+
                       "<td>"+ data.studentList[i].studentName +"</td>"+
                       "<td>"+ data.studentList[i].studentEmail +"</td>"+
+                      "<td>"+ data.studentList[i].studentReview +"</td>"+
                       "<td><input type='button' name='view' value='View' id='"+data.studentList[i].studentId+"' class='btn btn-primary btn-sm view_data table_btn' ></td>"+
                       "<td><input type='button' name='edit' value='Edit' id='"+data.studentList[i].studentId+"' class='btn btn-primary btn-sm edit_data table_btn' ></td>"+
                       "<td><input type='button' name='delete' value='Delete' id='"+data.studentList[i].studentId+"' class='btn btn-primary btn-sm delete_data table_btn' ></td>"+
