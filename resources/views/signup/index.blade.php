@@ -69,9 +69,9 @@
                 <div class="form-group">
       <label for="">User Type:</label>
       <select class="form-control form-control-sm" id="" name="userType">
-        <option value="">Select Role</option>
+        <option value="">Select Type</option>
         <option value="admin">Admin</option>
-        <option value="moderator">Moderator</option>
+        <option value="moderator">Customer</option>
       </select>
     </div>
     @if ($errors->has('userType'))
