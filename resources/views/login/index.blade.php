@@ -26,6 +26,7 @@
 						</div>
 						<div class="content3">
 							<input type="submit" name="submit" value="Login" />
+							<a style="color: #fff; text-decoration: none;" href="{{route('home.index')}}" class="float-right">Back to Home</a>
 						</div>
 					</div>
 				</div>

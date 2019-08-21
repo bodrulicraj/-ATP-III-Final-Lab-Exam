@@ -20,6 +20,13 @@ Route::get('/welcome', function () {
 });
 
 
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home.index');
+
+// ******************* Routes For Signup Controller *************************
+Route::get('/signup', 'SignUpController@index')->name('signup.index');
+Route::post('/signup', 'SignUpController@create_user');
+
 Route::get('/login','LoginController@index')->name('login.index');
 Route::post('/login','LoginController@verify')->name('login.verify');
 
@@ -31,8 +38,7 @@ Route::get('delete_student', 'AdminController@deleteStudent')->name('admin.delet
 
 Route::get('/customer', 'CustomerController@index')->name('customer.index');
 
-// Route::get('/addStudent', 'TeacherController@addStudent')->name('teacher.addStudent');
-// Route::post('/addStudent', 'TeacherController@createStudent');
+
 
 // Route::get('/studentList', 'TeacherController@studentList')->name('teacher.studentList');
 // Route::get('/courseList', 'TeacherController@courseList')->name('teacher.courseList');
