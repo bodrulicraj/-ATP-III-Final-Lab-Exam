@@ -29,7 +29,7 @@ Route::get('student_detail', 'AdminController@detailStudent')->name('admin.detai
 Route::get('delete_student', 'AdminController@deleteStudent')->name('admin.deleteStudent');
 
 
-Route::get('/customer', 'AdminController@index')->name('admin.index');
+Route::get('/customer', 'CustomerController@index')->name('customer.index');
 
 // Route::get('/addStudent', 'TeacherController@addStudent')->name('teacher.addStudent');
 // Route::post('/addStudent', 'TeacherController@createStudent');

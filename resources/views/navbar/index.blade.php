@@ -46,7 +46,7 @@
 						<div class="teacher_menu_section">
 							<ul>
 								<li><a href="{{route('admin.index')}}"> My Account</a></li>
-								<li><a href="{{route('admin.CustomerReviewsList')}}">&#x2756 Customer Reviews List</a></li>
+								@yield('mainBarAdmin')
 								<li><a href="{{route('logout.logout')}}">&#x27A5 Logout</a></li>
 							</ul>
 						</div>

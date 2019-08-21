@@ -8,6 +8,9 @@
 	<script type="text/javascript" src="{{asset('custom')}}/style/ajax/student.js"></script>
 @endsection
 
+@section('mainBarAdmin')
+	<li><a href="{{route('admin.CustomerReviewsList')}}">&#x2756 Customer Reviews List</a></li>
+@endsection	
 
 @section('mainBar')
 	<div class="studentList_wraper">
