@@ -1,43 +1,6 @@
 
 $(document).ready(function(){
 
-  $(document).on('click', '.edit_data', function(){
-    var sid = $(this).attr("id");
-    $.ajax({
-      url:'editStudent',
-      method:"GET",
-      dataType:"json",
-      data: {studentId: sid},
-      success:function(data){
-        $('#studentId').val(data[0].studentId);
-        $('#studentName').val(data[0].studentName);
-        $('#studentEmail').val(data[0].studentEmail);
-        $('#edit_student').modal('show');
-      }
-    });
-  });
-
-  $('#update_student').on("submit", function(event){
-    event.preventDefault();
-
-    if($('#studentId').val() == ""){
-      alert("Student Id is required");
-    }else if($('#studentName').val() == ""){
-      alert("Student Name is required");
-    }else if($('#studentEmail').val() == ""){
-      alert("Student Email is required");
-    }else{
-      $.ajax({
-        url:"editStudent",
-        method:"POST",
-        dataType:"json",
-        data:$('#update_student').serialize(),
-        success:function(data){
-          $('#edit_student').modal('hide');
-        }
-      });
-    }
-  });
 
   $(document).on('click', '.view_data', function(){
     var sid = $(this).attr("id");
@@ -61,6 +24,10 @@ $(document).ready(function(){
                         "<tr>"+
                           "<td width='35%' class='text-right'>Student Email:</td>"+
                           "<td width='65%'>"+ data[0].studentEmail +"</td>"+
+                        "</tr>"+
+                        "<tr>"+
+                          "<td width='35%' class='text-right'>Student Email:</td>"+
+                          "<td width='65%'>"+ data[0].studentReview +"</td>"+
                         "</tr>"+
                       "</tbody>"+
                     "</table>";

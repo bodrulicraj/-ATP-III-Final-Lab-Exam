@@ -34,64 +34,34 @@ class AdminController extends Controller
 		}
 	}
 
-	// // Code for Student Edit Function
-	// public function editStudent(Request $req)
-	// {
-	// 	if($req->session()->has('username')){
-	// 		$result = Student::where('studentId', $req->studentId)->get();
-	// 		return Response::json($result);
-	// 	}else {
-	// 		return redirect()->route('login.index');
-	// 	}
-	// }
+	// Code for Student Details
+	public function detailStudent(Request $req)
+	{
+		if($req->session()->has('username')){
+		$result = CustomerReviewsList::where('studentId', $req->studentId)->get();
+		return Response::json($result);
+		}else {
+		return redirect()->route('login.index');
+		}
+	}
 
-	// // Code for Student Update
-	// public function updateStudent(Request $req)
-	// {
-	//   if($req->session()->has('username')){
-	// 	$student = Student::find($req->studentId);
-  
-	// 	$student->studentName = $req->studentName;
-	// 	$student->studentEmail = $req->studentEmail;
-  
-	// 	if($student->save()){
-	// 	  $arr = ["message" => "Student Updated Successfully!"];
-	// 	  return Response::json($arr);
-	// 	}else {
-	// 	  $result = ["message" => "Student Updated Fail!"];
-	// 	  return Response::json($result);
-	// 	}
-	//   }else {
-	// 	return redirect()->route('login.index');
-	//   }
-	// }
-	// // Code for Student Details
-	// public function detailStudent(Request $req)
-	// {
-	// 	if($req->session()->has('username')){
-	// 	$result = Student::where('studentId', $req->studentId)->get();
-	// 	return Response::json($result);
-	// 	}else {
-	// 	return redirect()->route('login.index');
-	// 	}
-	// }
 
-	// // Code for Delete Student
-	// public function deleteStudent(Request $req)
-	// {
-	// 	if($req->session()->has('username')){
-	// 	if(Student::destroy($req->studentId)){
-	// 		$result = Student::all();
-	// 		$arr = ["studentList" => $result, "message" => "Student Delete Successfully!"];
-	// 		return Response::json($arr);
-	// 	}else {
-	// 		$result = ["message" => "Student Delete Fail!"];
-	// 		return Response::json($result);
-	// 	}
-	// 	}else {
-	// 	return redirect()->route('login.index');
-	// 	}
-	// }
+	// Code for Delete Student
+	public function deleteStudent(Request $req)
+	{
+		if($req->session()->has('username')){
+		if(CustomerReviewsList::destroy($req->studentId)){
+			$result = CustomerReviewsList::all();
+			$arr = ["studentList" => $result, "message" => "Reviews Delete Successfully!"];
+			return Response::json($arr);
+		}else {
+			$result = ["message" => "Reviews Delete Fail!"];
+			return Response::json($result);
+		}
+		}else {
+		return redirect()->route('login.index');
+		}
+	}
 
 	// // Code for Course List Function
 	// public function courseList(Request $req)

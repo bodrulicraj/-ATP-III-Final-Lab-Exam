@@ -14,7 +14,7 @@
 		<script type="text/javascript" src="{{asset('custom')}}/bootstrap/js/jquery.min.js"></script>
 		<script type="text/javascript" src="{{asset('custom')}}/bootstrap/js/popper.min.js"></script>
 		<script type="text/javascript" src="{{asset('custom')}}/bootstrap/js/bootstrap.min.js"></script>
-
+		@yield('student_ajax')
   	</head>
 	
 	<body>
@@ -28,13 +28,7 @@
 					</div>
 
 					<div class="teacher_menu_icon">
-						<ul>
-							<!-- <li><a href="/teacher/cancel_course">&#x271A Cancel Course</a></li>
-							<li><a href="/teacher/cancel_batch">&#x271A Cancel Batch</a></li>
-							<li><a href="/teacher/upload_grade">&#x271A Upload Grade</a></li>
-							<li><a href="/teacher/upload_document">&#x271A Upload Document</a></li> -->
-							<!-- <li><a href="/logout/logout" style="font-size: 26px;padding-top: 3px;" title="Logout">&#x27A5</a></li> -->
-						</ul>
+						
 					</div>
 				</div>
 			</div>		
@@ -75,3 +69,4 @@
 		</div>
 	</body>
 </html>
+@yield('view_modal')
