@@ -24,6 +24,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home.index');
 Route::get('/user', 'HomeController@user')->name('user.index');
 Route::get('/product', 'HomeController@product')->name('user.product');
+Route::get('/asus', 'HomeController@asus')->name('asus.product');
 
 // ******************* Routes For Signup Controller *************************
 Route::get('/signup', 'SignUpController@index')->name('signup.index');
@@ -35,30 +36,12 @@ Route::post('/login','LoginController@verify')->name('login.verify');
 Route::get('/admin', 'AdminController@index')->name('admin.index');
 Route::get('/CustomerReviewsList', 'AdminController@CustomerReviewsList')->name('admin.CustomerReviewsList');
 Route::get('student_detail', 'AdminController@detailStudent')->name('admin.detailStudent');
-Route::get('delete_student', 'AdminController@deleteStudent')->name('admin.deleteStudent');
+Route::get('/admin/delete_student', 'AdminController@deleteStudent')->name('admin.deleteStudent');
 
 
 Route::get('/customer', 'CustomerController@index')->name('customer.index');
 
 
-
-// Route::get('/studentList', 'TeacherController@studentList')->name('teacher.studentList');
-// Route::get('/courseList', 'TeacherController@courseList')->name('teacher.courseList');
-// Route::get('/batchList', 'TeacherController@batchList')->name('teacher.batchList');
-// Route::get('/classSchedule', 'TeacherController@classSchedule')->name('teacher.classSchedule');
-// Route::get('/documentList', 'TeacherController@documentList')->name('teacher.documentList');
-// Route::get('/financialStatus', 'TeacherController@financialStatus')->name('teacher.financialStatus');
-// Route::get('/teacherProfile', 'TeacherController@teacherProfile')->name('teacher.teacherProfile');
-// Route::get('/message', 'TeacherController@message')->name('teacher.message');
-// Route::get('/changePassword', 'TeacherController@changePassword')->name('teacher.changePassword');
-
-// Route::get('editStudent', 'TeacherController@editStudent')->name('teacher.editStudent');
-// Route::post('editStudent', 'TeacherController@updateStudent');
-// Route::get('student_detail', 'TeacherController@detailStudent')->name('teacher.detailStudent');
-// Route::get('delete_student', 'TeacherController@deleteStudent')->name('teacher.deleteStudent');
-
-// Route::get('course_detail', 'TeacherController@detailCourse')->name('teacher.detailCourse');
-// Route::get('batch_detail', 'TeacherController@detailBatch')->name('teacher.detailBatch');
 
 
 Route::get('/logout', 'LogoutController@index')->name('logout.logout');

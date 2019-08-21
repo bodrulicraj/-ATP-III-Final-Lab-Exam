@@ -20,4 +20,9 @@ class HomeController extends Controller
   {
     return view('user.product');
   }
+
+  public function asus()
+  {
+    return view('user.asus');
+  }
 }

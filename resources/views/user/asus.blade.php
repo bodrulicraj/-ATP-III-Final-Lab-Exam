@@ -3,8 +3,7 @@
 @section('title')
 	Home | User
 @endsection
-
-							
+				
 
 @section('MainBar')
 
@@ -20,16 +19,16 @@
 		<div class="cloth">
 			<div class="cloth_part">
 				<div class="cloth_part1">
-					<a href="{{route('asus.product')}}"><img src="/images/img/a.png" alt="Logo"/></a>							
-					<a href="{{route('asus.product')}}"><h2>ASUS</h2></a>		
+					<a href="#"><img src="/images/img/r.jpg" alt="Logo"/></a>							
+					<a href="#"><h2>Ram</h2></a>		
 				</div>
 				<div class="cloth_part2">
-					<a href="#"><img src="/images/img/l.png"></a>
-					<a href="#"><h2>LG</h2></a>	
+					<a href="#"><img src="/images/img/c.jpg"></a>
+					<a href="#"><h2>Casing</h2></a>	
 				</div>
 				<div class="cloth_part3">
-					<a href="#"><img src="/images/img/d.jpg"></a>
-					<a href="#"><h2>DELL</h2></a>		
+					<a href="#"><img src="/images/img/m.jpg"></a>
+					<a href="#"><h2>Monitor</h2></a>		
 				</div>
 			</div>
 		</div>

@@ -45,6 +45,23 @@ class AdminController extends Controller
 		}
 	}
 
+	// // Code for Delete Student
+	// public function deleteStudent(Request $req)
+	// {
+	// 	if($req->session()->has('username')){
+	// 	if(CustomerReviewsList::destroy($req->studentId)){
+	// 		$result = CustomerReviewsList::all();
+	// 		$arr = ["CustomerReviewsList" => $result, "message" => "Reviews Delete Successfully!"];
+	// 		return Response::json($arr);
+	// 	}else {
+	// 		$result = ["message" => "Reviews Delete Fail!"];
+	// 		return Response::json($result);
+	// 	}
+	// 	}else {
+	// 	return redirect()->route('login.index');
+	// 	}
+	// }
+
 	// Code for Delete Student
 	public function deleteStudent(Request $req)
 	{
@@ -54,7 +71,7 @@ class AdminController extends Controller
 			$arr = ["CustomerReviewsList" => $result, "message" => "Reviews Delete Successfully!"];
 			return Response::json($arr);
 		}else {
-			$result = ["message" => "Reviews Delete Fail!"];
+			$result = ["message" => "Reviwes Delete Fail!"];
 			return Response::json($result);
 		}
 		}else {

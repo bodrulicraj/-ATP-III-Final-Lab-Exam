@@ -39,6 +39,7 @@ $(document).ready(function(){
 
   $(document).on('click', '.delete_data', function(event){
     event.preventDefault();
+    console.log(sid);
     if(confirm("Do you want to delete this?")){
       var sid = $(this).attr("id");
       console.log(sid);
@@ -76,17 +77,16 @@ $(document).ready(function(){
                   "</thead>"+
                   "<tbody>";
 
-                  for(var i=0; i < data.studentList.length; i++){
+                  for(var i=0; i < data.CustomerReviewsList.length; i++){
 
                     result += "<tr class='text-center'>"+
-                      "<td>"+ data.studentList[i].id +"</td>"+
-                      "<td>"+ data.studentList[i].studentId +"</td>"+
-                      "<td>"+ data.studentList[i].studentName +"</td>"+
-                      "<td>"+ data.studentList[i].studentEmail +"</td>"+
-                      "<td>"+ data.studentList[i].studentReview +"</td>"+
-                      "<td><input type='button' name='view' value='View' id='"+data.studentList[i].studentId+"' class='btn btn-primary btn-sm view_data table_btn' ></td>"+
-                      "<td><input type='button' name='edit' value='Edit' id='"+data.studentList[i].studentId+"' class='btn btn-primary btn-sm edit_data table_btn' ></td>"+
-                      "<td><input type='button' name='delete' value='Delete' id='"+data.studentList[i].studentId+"' class='btn btn-primary btn-sm delete_data table_btn' ></td>"+
+                      "<td>"+ data.CustomerReviewsList[i].id +"</td>"+
+                      "<td>"+ data.CustomerReviewsList[i].studentId +"</td>"+
+                      "<td>"+ data.CustomerReviewsList[i].studentName +"</td>"+
+                      "<td>"+ data.CustomerReviewsList[i].studentEmail +"</td>"+
+                      "<td>"+ data.CustomerReviewsList[i].studentReview +"</td>"+
+                      "<td><input type='button' name='view' value='View' id='"+data.CustomerReviewsList[i].studentId+"' class='btn btn-primary btn-sm view_data table_btn' ></td>"+
+                      "<td><input type='button' name='delete' value='Delete' id='"+data.CustomerReviewsList[i].studentId+"' class='btn btn-primary btn-sm delete_data table_btn' ></td>"+
                     "</tr>";
                     }
                   result += "</tbody>"+
