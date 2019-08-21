@@ -3,15 +3,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    	<!-- <title>Home</title> -->
+		<title>@yield('title')</title>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/product.css">
   </head>
   <body>
     <div class="header_wraper">
       <div class="header container_center">
         <div class="logo">
           <!-- <a href="#"><img src="images/logo.png" alt="Logo" /></a> -->
-					<a href="#"><h2>Online School</h2></a>
+					<a href="#"><h2>Online Computer Shop</h2></a>
 				</div>
 
 				<div class="social_media">
@@ -24,7 +26,8 @@
 			<div class="nav container_center">
 				<div class="menu_left">
 						<ul>
-							<li><a href="#" id="active" >Home</a></li>
+							<li><a href="{{route('home.index')}}" id="active" >Home</a></li>
+							<li><a href="{{route('user.index')}}"> USERS</a></li>
 							<li><a href="{{route('signup.index')}}"> Register</a></li>
 						</ul>
 				</div>
@@ -37,12 +40,13 @@
       </div>
     </div>
 
+
     <div class="footer_wraper">
       <div class="footer">
         <div class="footer_top">
-          <div class="top container_center">
+          <div class="top container_center">  					  
+	  				@yield('MainBar')
   				  <div class="footer_top_title">
-  					  <h3></h3>
   				  </div>
   					
   				</div>

@@ -22,6 +22,8 @@ Route::get('/welcome', function () {
 
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index')->name('home.index');
+Route::get('/user', 'HomeController@user')->name('user.index');
+Route::get('/product', 'HomeController@product')->name('user.product');
 
 // ******************* Routes For Signup Controller *************************
 Route::get('/signup', 'SignUpController@index')->name('signup.index');

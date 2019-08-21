@@ -10,4 +10,14 @@ class HomeController extends Controller
   {
     return view('home.index');
   }
+
+  public function user()
+  {
+    return view('user.index');
+  }
+
+  public function product()
+  {
+    return view('user.product');
+  }
 }
