@@ -39,6 +39,9 @@ Route::get('student_detail', 'AdminController@detailStudent')->name('admin.detai
 Route::get('delete_student', 'AdminController@deleteStudent')->name('admin.deleteStudent');
 
 
+Route::get('/profile', 'AdminController@profile')->name('admin.profile');
+
+
 Route::get('/customer', 'CustomerController@index')->name('customer.index');
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Response;
 use App\admin;
 use App\CustomerReviewsList;
+use App\profile;
 
 
 use Illuminate\Http\Request;
@@ -74,6 +75,17 @@ class AdminController extends Controller
 			$result = ["message" => "Reviwes Delete Fail!"];
 			return Response::json($result);
 		}
+		}else {
+		return redirect()->route('login.index');
+		}
+	}
+
+	// Code for Profile Function
+	public function profile(Request $req)
+	{
+		if($req->session()->has('username')){
+		$result = profile::all();
+		return view('admin.profile', ['teacherProfile' => $result]);
 		}else {
 		return redirect()->route('login.index');
 		}
