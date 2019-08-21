@@ -23,7 +23,8 @@ Route::get('/welcome', function () {
 Route::get('/login','LoginController@index')->name('login.index');
 Route::post('/login','LoginController@verify')->name('login.verify');
 
-// Route::get('/teacher', 'TeacherController@index')->name('teacher.index');
+Route::get('/admin', 'AdminController@index')->name('admin.index');
+Route::get('/CustomerReviewsList', 'AdminController@CustomerReviewsList')->name('admin.CustomerReviewsList');
 
 // Route::get('/addStudent', 'TeacherController@addStudent')->name('teacher.addStudent');
 // Route::post('/addStudent', 'TeacherController@createStudent');

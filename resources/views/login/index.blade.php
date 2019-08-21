@@ -12,7 +12,7 @@
 			<form method="post" action="/login">	
 				<div class="login_form">
 					<div class="form_title">
-						<h2> Portal Login Form</h2>						
+						<h2> Login Form</h2>						
 						<h4 style="text-align: center;color: #ff0000;font-weight: 200;">{{session('logmsg')}}</h4><br>
 					</div>					
 
@@ -38,7 +38,7 @@
 			</div>
 			<div class="footer_bottom">
 				<div class=" bottom container_center">
-					<p>Copyright 2018-19 &copy; onlineschool.com <br/> &reg All Right Reserved</p>
+					<p>Copyright 2018-19 &copy; ComputerShop.com <br/> &reg All Right Reserved</p>
 				</div>
 			</div>
 		</div>

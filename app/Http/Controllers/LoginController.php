@@ -32,9 +32,9 @@ class LoginController extends Controller
           $request->session()->put('type',1);
           return redirect()->route('admin.index');
         }
-        else if ($user->type == 'teacher') {
+        else if ($user->type == 'customer') {
           $request->session()->put('type',2);
-          return redirect()->route('teacher.index');
+          return redirect()->route('customer.index');
         }
         else{
           $request->session()->put('type',3);
