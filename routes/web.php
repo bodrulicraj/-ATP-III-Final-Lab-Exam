@@ -36,7 +36,7 @@ Route::post('/login','LoginController@verify')->name('login.verify');
 Route::get('/admin', 'AdminController@index')->name('admin.index');
 Route::get('/CustomerReviewsList', 'AdminController@CustomerReviewsList')->name('admin.CustomerReviewsList');
 Route::get('student_detail', 'AdminController@detailStudent')->name('admin.detailStudent');
-Route::get('/admin/delete_student', 'AdminController@deleteStudent')->name('admin.deleteStudent');
+Route::get('delete_student', 'AdminController@deleteStudent')->name('admin.deleteStudent');
 
 
 Route::get('/customer', 'CustomerController@index')->name('customer.index');
