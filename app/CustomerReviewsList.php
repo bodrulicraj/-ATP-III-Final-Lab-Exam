@@ -6,9 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class CustomerReviewsList extends Model
 {
-  protected $table = 'CustomerReviewsList';
-  protected $primaryKey = 'studentId';
-  // protected $primaryKey = 'customerId';
+  protected $table = 'review';
+  protected $primaryKey = 'customerId';
   protected $keyType = 'string';
   public $timestamps = false;
 }

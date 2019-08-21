@@ -6,6 +6,7 @@
 	    <meta charset="utf-8">
 		<title>@yield('title')</title>
 		<link rel="stylesheet" href="/css/admin/admin.css">
+		<link rel="stylesheet" href="/css/admin/reviewsList.css">
 
 
 		<!--  -->

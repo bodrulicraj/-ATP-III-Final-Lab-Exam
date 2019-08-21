@@ -25,7 +25,7 @@ class AdminController extends Controller
 	public function CustomerReviewsList(Request $req)
 	{
 		if($req->session()->has('username')){
-		$result = CustomerReviews::all();
+		$result = CustomerReviewsList::all();
 		// $result = Student::all()->sortBy('studentName');
 		// $result = Student::all()->sortByDesc('studentName');
 		return view('admin.CustomerReviewsList', ['CustomerReviewsList' => $result]);
